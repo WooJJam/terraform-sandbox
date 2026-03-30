@@ -15,10 +15,10 @@ data "aws_ami" "ubuntu" {
 
 resource "aws_instance" "terraform_sandbox" {
   ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
+  instance_type = var.instance_type
 
   tags = {
-    Name = "terraform-sandbox-instance"
+    Name = var.instance_name
   }
 
 }
