@@ -8,3 +8,7 @@ terraform {
 
   required_version = ">= 1.14"
 }
+
+provider "aws" {
+  region = var.seoul_region
+}

@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "ap-northeast-2"
-}
-
 data "aws_ami" "ubuntu" {
   most_recent = true
 
@@ -21,4 +17,12 @@ resource "aws_instance" "terraform_sandbox" {
     Name = var.instance_name
   }
 
+}
+
+resource "aws_vpc" "sandbox_vpc" {
+  cidr_block = "10.0.0.0/16"
+
+  tags = {
+    Name = "sandbox-vpc"
+  }
 }

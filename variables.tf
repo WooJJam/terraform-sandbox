@@ -9,3 +9,15 @@ variable "instance_type" {
   type        = string
   default     = "t3.micro"
 }
+
+variable "seoul_region" {
+  description = "Seoul region"
+  type = string
+  default = "ap-northeast-2"
+}
+
+variable "vpc_cidr" {
+  description = "VPC cidr"
+  type = string
+  default = "10.0.0.0/16"
+}
