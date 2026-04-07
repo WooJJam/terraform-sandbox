@@ -37,3 +37,11 @@ resource "aws_subnet" "sandbox_subnet" {
     Name = "sandbox-subnet"
   }
 }
+
+resource "aws_internet_gateway" "sandbox_igw" {
+  vpc_id = aws_vpc.sandbox_vpc.id
+
+  tags = {
+    Name = "sandbox-igw"
+  }
+}
