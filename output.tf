@@ -1,11 +1,11 @@
 output "instance_public_ip" {
   description = "Public IP of the instance"
-  value       = aws_instance.terraform_sandbox.public_ip
+  value       = aws_instance.terraform_public_sandbox
 }
 
 output "instance_hostname" {
   description = "Hostname of the instance"
-  value       = aws_instance.terraform_sandbox.public_dns
+  value       = aws_instance.terraform_public_sandbox.public_dns
 }
 
 output "vpc_cidr" {
